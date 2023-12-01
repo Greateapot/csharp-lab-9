@@ -54,13 +54,14 @@ namespace Lab9
 
         public static TriangleArray Create(uint length)
         {
-            var triangles = new TriangleArray(length);
+            var triangles = new TriangleArray(new Triangle[length]);
 
             for (var index = 0; index < length; index++)
                 triangles[index] = Triangle.Create();
 
             return triangles;
         }
+
         public override string ToString() => string.Format(Messages.TriangleArrayToString, string.Join<Triangle>(", ", triangles));
     }
 }
