@@ -7,8 +7,8 @@ namespace Lab9
         public const string InputTriangleB = "Введите длину стороны b: ";
         public const string InputTriangleC = "Введите длину стороны c: ";
         public const string OutOfBoundsErrorMessage = "Индекс не входит в массив.";
-        public const string TriangleToString = "Triangle({0}, {1}, {2})";
-        public const string TriangleArrayToString = "TriangleArray({0})";
+        public const string TriangleToString = "Triangle({0:F3}, {1:F3}, {2:F3})";
+        public const string TriangleArrayToString = "TriangleArray(\n\t{0}\n)";
         public const string InstanceCounterNoInstanceErrorMessage = "No instance counter for type {0}.";
         public const string MainDialogSelectTask = "Выберите задание:";
         public const string MainDialogTask1Option = "Задание 1";
@@ -80,5 +80,8 @@ namespace Lab9
         public const string Task3ProcessMinAreaTriangle = "Минимальный элемент (под номером {0}): {1}";
         public const string Task3ProcessSwapMinTriangle = "Замена минимального элемента случайным: {0}";
         public const string Task3ProcessUpdatedTriangleArray = "Обновленная коллекция треугольников: {0}";
+        public const string Task3ProcessCreateNewTriangle = "Создайте новый треугольник, для проверки нахождения минимума: ";
+        public const string Task3ProcessInputNewTriangeNumber = "Введите номер треугольника, на вместо которого будет вставлен новый треугольник: ";
+        public const string Task3ProcessNumberNotFound = "Нет треугольника с таким номером!";
     }
 }

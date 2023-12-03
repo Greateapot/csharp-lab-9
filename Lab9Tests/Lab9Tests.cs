@@ -36,16 +36,16 @@ namespace Lab9Tests
             consoleIO.PushKey(ConsoleKey.Backspace, ConsoleKey.DownArrow, ConsoleKey.Enter);
             //* t3m -> t3o1e
             consoleIO.PushKey(ConsoleKey.Enter);
-            //* input: 2, 20, 30, 40, 40, 10, 50
-            consoleIO.PushLine("2", "20", "30", "40", "40", "10", "50");
+            //* input: 2, 20, 30, 40, 40, 10, 50, 10, 10, 20, 3, 2
+            consoleIO.PushLine("2", "20", "30", "40", "40", "10", "50", "10", "10", "20", "3", "2");
             //* test output
             consoleIO.PushTest(Test3);
             //* pakt
             consoleIO.PushKey(ConsoleKey.Enter);
             //* t3o2s -> t3o2e
             consoleIO.PushKey(ConsoleKey.DownArrow, ConsoleKey.Enter);
-            //* input: 10
-            consoleIO.PushLine("10");
+            //* input: 10, 9, 9, 9, 1
+            consoleIO.PushLine("10", "9", "9", "9", "1");
             //* pakt
             consoleIO.PushKey(ConsoleKey.Enter);
             //* t3o3s -> t3o3e -> pakt
@@ -60,7 +60,7 @@ namespace Lab9Tests
         {
             // arrange
             var exceptedOutput = string.Join("\n", new string[]{
-                "Треугольник: Triangle(20, 30, 40)",
+                "Треугольник: Triangle(20,000, 30,000, 40,000)",
                 "Существует ли треугольник с такими длинами сторон:",
                 "triangle.IsExists() (метод класса) результат: True",
                 "Triangle.IsExists(triangle) (статический метод) результат: True",
@@ -77,7 +77,7 @@ namespace Lab9Tests
         {
             // arrange
             var exceptedOutput1 = string.Join("\n", new string[]{
-                "Треугольник: Triangle(40, 10, 50)",
+                "Треугольник: Triangle(40,000, 10,000, 50,000)",
                 "Унарные операции:",
                 "triangle.CalculateArea() (метод класса) результат: 0",
                 "Triangle.CalculateArea(triangle) (статический метод) результат: 0",
@@ -99,8 +99,8 @@ namespace Lab9Tests
         {
             // arrange
             var exceptedOutput1 = string.Join("\n", new string[]{
-                "Коллекция треугольников: TriangleArray(Triangle(20, 30, 40), Triangle(40, 10, 50))",
-                "Минимальный элемент (под номером 1): Triangle(20, 30, 40)"
+                "Коллекция треугольников: TriangleArray(\n\tTriangle(20,000, 30,000, 40,000),\n\tTriangle(40,000, 10,000, 50,000)\n)",
+                "Минимальный элемент (под номером 1): Triangle(20,000, 30,000, 40,000)"
             });
             var exceptedOutput2 = string.Join("\n", new string[]{
                 "Количество экземпляров класса Triangle: 9",

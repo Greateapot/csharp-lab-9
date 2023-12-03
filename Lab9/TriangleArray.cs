@@ -62,6 +62,6 @@ namespace Lab9
             return triangles;
         }
 
-        public override string ToString() => string.Format(Messages.TriangleArrayToString, string.Join<Triangle>(", ", triangles));
+        public override string ToString() => string.Format(Messages.TriangleArrayToString, string.Join<Triangle>(",\n\t", triangles));
     }
 }

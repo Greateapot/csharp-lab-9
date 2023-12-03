@@ -169,12 +169,23 @@ namespace Lab9
                 if (resultIndex < 0) return;
             }
             {
-                var triangle = Triangle.CreateRandom(random);
+                ConsoleIO.WriteLine(Messages.Task3ProcessCreateNewTriangle);
+                var triangle = Triangle.Create();
 
-                ConsoleIO.WriteLineFormat(Messages.Task3ProcessSwapMinTriangle, triangle);
-
-                triangles[resultIndex] = triangle;
-
+                var isValid = false;
+                do
+                {
+                    try
+                    {
+                        var index = ConsoleIO.Input<int>(Messages.Task3ProcessInputNewTriangeNumber);
+                        triangles[index -1] = triangle;
+                        isValid = true;
+                    }
+                    catch (ArgumentException)
+                    {
+                        ConsoleIO.WriteLine(Messages.Task3ProcessNumberNotFound);
+                    }
+                } while (!isValid);
                 ConsoleIO.WriteLineFormat(Messages.Task3ProcessUpdatedTriangleArray, triangles);
             }
             {
